@@ -28,7 +28,36 @@ func fibonacci(n: Int) {
             b = c
         }
     }
-    print(arr)
+    //print(arr)
 }
 
-fibonacci(n: 10)
+//fibonacci(n: 10)
+
+
+func leapYear(_ year: Int) -> Bool {
+    
+    if year % 400 == 0 {
+       return true
+   } else if year % 100 == 0 {
+       return false
+   } else if year % 4 == 0 {
+       return true
+   } else {
+        return false
+    }
+}
+//print(leapYear(1968))
+
+
+func existsHigher(_ arr: [Int], _ n: Int) -> Bool {
+        
+    for number in arr {
+        if number >= n {
+            return true
+        }
+    }
+    return false
+}
+//print(existsHigher([5, 3, 15, 22, 4], 10))
+//print(existsHigher([1, 2, 3, 4, 5], 8))
+print(existsHigher([], 10))
