@@ -60,4 +60,15 @@ func existsHigher(_ arr: [Int], _ n: Int) -> Bool {
 }
 //print(existsHigher([5, 3, 15, 22, 4], 10))
 //print(existsHigher([1, 2, 3, 4, 5], 8))
-print(existsHigher([], 10))
+//print(existsHigher([], 10))
+
+
+//Add up the Numbers from a Single Number
+func addUp(_ num: Int) -> Int {
+    var totalNumber = 0
+    for number in 1...num {
+        totalNumber += number
+    }
+    return totalNumber
+}
+print((addUp(4)))
