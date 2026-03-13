@@ -71,4 +71,30 @@ func addUp(_ num: Int) -> Int {
     }
     return totalNumber
 }
-print((addUp(4)))
+//print((addUp(4)))
+
+
+//Find the Smallest and Biggest Numbers
+//My Logic
+func minMax(_ arr: [Double]) -> [Double] {
+    let maxValue = Double(arr.max() ?? 0)
+    let minValue = Double(arr.min() ?? 0)
+    return [minValue, maxValue]
+}
+
+
+//Improved Logic
+func minMax2(_ arr: [Double]) -> [Double] {
+    
+    var minValue = arr[0]
+    var maxValue = arr[0]
+    
+    for num in arr {
+        if num < minValue { minValue = num }
+        if num > maxValue { maxValue = num }
+    }
+    return [minValue, maxValue]
+}
+
+print(minMax([1, 2, 3, 4, 5]))
+print(minMax2([1, 2, 3, 4, 5]))
