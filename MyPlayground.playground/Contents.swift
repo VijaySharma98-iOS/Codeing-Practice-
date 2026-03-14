@@ -98,3 +98,22 @@ func minMax2(_ arr: [Double]) -> [Double] {
 
 print(minMax([1, 2, 3, 4, 5]))
 print(minMax2([1, 2, 3, 4, 5]))
+
+
+//Your job is to create a function that takes 3 numbers: a, b, c and returns true if the last digit of a * b = the last digit of c. Check the examples below for an explanation.
+//My Logic
+func lastDig(_ a: Int, _ b: Int, _ c: Int) -> Bool {
+    let value = String(a * b)
+    let strC = String(c)
+    if value.last == strC.last {
+        return true
+    }
+    return false
+}
+
+//Improved Logic
+func lastDig(_ a: Int, _ b: Int, _ c: Int) -> Bool {
+    return (a * b) % 10 == c % 10
+}
+
+print(lastDig(12, 215, 2142))
